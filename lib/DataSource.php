@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright (C) Phppot
  *
@@ -6,6 +7,7 @@
  * In essense, you can do commercial use, modify, distribute and private use.
  * Though not mandatory, you are requested to attribute Phppot URL in your code or website.
  */
+
 namespace Phppot;
 
 /**
@@ -22,11 +24,11 @@ class DataSource
     // for better encapsulation
     const HOST = 'localhost';
 
-    const USERNAME = 'nextutdp_uzr';
+    const USERNAME = 'root';
 
-    const PASSWORD = '6amGrJET8HRgmLgc';
+    const PASSWORD = '';
 
-    const DATABASENAME = 'nextutdp_bdd';
+    const DATABASENAME = 'nextutdp_bdd_test';
 
     private $conn;
 
@@ -93,7 +95,7 @@ class DataSource
     {
         $stmt = $this->conn->prepare($query);
 
-        if (! empty($paramType) && ! empty($paramArray)) {
+        if (!empty($paramType) && !empty($paramArray)) {
 
             $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
@@ -106,7 +108,7 @@ class DataSource
             }
         }
 
-        if (! empty($resultset)) {
+        if (!empty($resultset)) {
             return $resultset;
         }
     }
@@ -140,7 +142,7 @@ class DataSource
     {
         $stmt = $this->conn->prepare($query);
 
-        if (! empty($paramType) && ! empty($paramArray)) {
+        if (!empty($paramType) && !empty($paramArray)) {
             $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
         $stmt->execute();
@@ -157,9 +159,9 @@ class DataSource
      */
     public function bindQueryParams($stmt, $paramType, $paramArray = array())
     {
-        $paramValueReference[] = & $paramType;
-        for ($i = 0; $i < count($paramArray); $i ++) {
-            $paramValueReference[] = & $paramArray[$i];
+        $paramValueReference[] = &$paramType;
+        for ($i = 0; $i < count($paramArray); $i++) {
+            $paramValueReference[] = &$paramArray[$i];
         }
         call_user_func_array(array(
             $stmt,
@@ -178,7 +180,7 @@ class DataSource
     public function getRecordCount($query, $paramType = "", $paramArray = array())
     {
         $stmt = $this->conn->prepare($query);
-        if (! empty($paramType) && ! empty($paramArray)) {
+        if (!empty($paramType) && !empty($paramArray)) {
 
             $this->bindQueryParams($stmt, $paramType, $paramArray);
         }

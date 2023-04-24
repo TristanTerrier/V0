@@ -1,4 +1,5 @@
 <?php
+
 namespace Phppot;
 
 class Member
@@ -8,7 +9,7 @@ class Member
 
     function __construct()
     {
-        require_once __DIR__ . '/../lib/DataSource.php';
+        require_once '../lib/DataSource.php';
         $this->ds = new DataSource();
     }
 
@@ -84,7 +85,7 @@ class Member
                 "message" => "Email already exists."
             );
         } else {
-            if (! empty($_POST["signup-password"])) {
+            if (!empty($_POST["signup-password"])) {
 
                 // PHP's password_hash is the best choice to use to store passwords
                 // do not attempt to do your own encryption, it is not safe
@@ -98,7 +99,7 @@ class Member
                 $_POST["email"]
             );
             $memberId = $this->ds->insert($query, $paramType, $paramValue);
-            if (! empty($memberId)) {
+            if (!empty($memberId)) {
                 $response = array(
                     "status" => "success",
                     "message" => "You have registered successfully."
@@ -128,8 +129,8 @@ class Member
     {
         $memberRecord = $this->getMember($_POST["username"]);
         $loginPassword = 0;
-        if (! empty($memberRecord)) {
-            if (! empty($_POST["login-password"])) {
+        if (!empty($memberRecord)) {
+            if (!empty($_POST["login-password"])) {
                 $password = $_POST["login-password"];
             }
             $hashedPassword = $memberRecord[0]["password"];

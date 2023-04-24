@@ -12,16 +12,16 @@ if (!empty($_POST["signup-btn"])) {
 
 <HEAD>
 	<TITLE>User Registration</TITLE>
-	<link href="assets/css/phppot-style.css" type="text/css" rel="stylesheet" />
-	<link href="assets/css/user-registration.css" type="text/css" rel="stylesheet" />
-	<script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
+	<link href="../assets/css/phppot-style.css" type="text/css" rel="stylesheet" />
+	<link href="../assets/css/user-registration.css" type="text/css" rel="stylesheet" />
+	<script src="../vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
 
 <BODY>
 	<div class="phppot-container">
 		<div class="sign-up-container">
 			<div class="login-signup">
-				<a href="index.php">Login</a>
+				<a href="./index.php">Login</a>
 			</div>
 			<div class="">
 				<form name="sign-up" action="" method="post" onsubmit="return signupValidation()">
