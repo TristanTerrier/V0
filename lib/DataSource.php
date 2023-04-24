@@ -22,11 +22,11 @@ class DataSource
     // for better encapsulation
     const HOST = 'localhost';
 
-    const USERNAME = 'root';
+    const USERNAME = 'nextutdp_uzr';
 
-    const PASSWORD = 'admin123';
+    const PASSWORD = '6amGrJET8HRgmLgc';
 
-    const DATABASENAME = 'user-registration';
+    const DATABASENAME = 'nextutdp_bdd';
 
     private $conn;
 
