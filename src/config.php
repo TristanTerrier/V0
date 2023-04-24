@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 
 const HOST = '';
@@ -63,3 +64,6 @@ public function getPdoConnection()
 }
 
 ?>
+=======
+$pdo = new PDO('mysql:host=localhost;dbname=nextutdp_bdd', 'nextutdp_uzr', '6amGrJET8HRgmLgc');
+>>>>>>> 20af6116d491b345f316831149e1cf2e5412d9c4
