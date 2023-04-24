@@ -7,7 +7,6 @@
     <link href="../assets/css/style3.css" type="text/css" rel="stylesheet" />
     <title>Document</title>
 </head>
-
 <header class="header">
   <div class="header-profile">
     <div class="header-profile-photo-container">
