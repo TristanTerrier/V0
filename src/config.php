@@ -1,6 +1,6 @@
 <?php
 
-
+class config{
 
 const HOST = 'localhost';
 
@@ -62,7 +62,7 @@ public function getPdoConnection()
     }
     return $conn;
 }
-
+}
 ?>
 
 
