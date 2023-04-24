@@ -28,7 +28,7 @@ class DataSource
 
     const PASSWORD = '';
 
-    const DATABASENAME = 'nextutdp_bdd_test';
+    const DATABASENAME = 'nextutdp_bdd';
 
     private $conn;
 
