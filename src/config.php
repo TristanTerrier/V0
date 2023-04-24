@@ -1,14 +1,14 @@
 <?php
-<<<<<<< HEAD
 
 
-const HOST = '';
 
-const USERNAME = '';
+const HOST = 'localhost';
 
-const PASSWORD = '';
+const USERNAME = 'nextutdp_uzr';
 
-const DATABASENAME = '';
+const PASSWORD = '6amGrJET8HRgmLgc';
+
+const DATABASENAME = 'nextutdp_bdd';
 
 private $conn;
 
@@ -64,6 +64,5 @@ public function getPdoConnection()
 }
 
 ?>
-=======
-$pdo = new PDO('mysql:host=localhost;dbname=nextutdp_bdd', 'nextutdp_uzr', '6amGrJET8HRgmLgc');
->>>>>>> 20af6116d491b345f316831149e1cf2e5412d9c4
+
+
