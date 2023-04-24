@@ -103,6 +103,8 @@ class Member
                 $response = array(
                     "status" => "success",
                     "message" => "You have registered successfully."
+                    $url = "./home.php";
+
                 );
             }
         }
