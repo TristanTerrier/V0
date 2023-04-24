@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/style3.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <header class="header">
@@ -14,7 +14,7 @@
     </div>
     <span class="header-profile-text">Profil</span>
   </div>
-  <a href="home.html"><img src="logo.png" alt="Logo" class="header-logo"></a>
+  <a href="home.php"><img src="logo.png" alt="Logo" class="header-logo"></a>
   <div class="header-buttons">
     <button class="header-button">Bouton 1</button>
     <button class="header-button">Bouton 2</button>
