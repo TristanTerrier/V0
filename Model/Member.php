@@ -104,6 +104,8 @@ class Member
                     "status" => "success",
                     "message" => "You have registered successfully."
                 );
+                $url = "./home.php";
+                header("Location: $url");
             }
         }
         return $response;
