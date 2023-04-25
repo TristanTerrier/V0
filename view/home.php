@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <h1>Mes Tests</h1>
+    <div>
+        <h1>faire un este</h1>
+    </div>
+    <div class="block_test">
     <h2><a href="quiz.php">Faire un test</a></h2>
-
+    </div>
 </body>
 
 </html>
