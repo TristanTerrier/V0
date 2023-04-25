@@ -22,7 +22,7 @@ class DataSource
     // PHP 7.1.0 visibility modifiers are allowed for class constants.
     // when using above 7.1.0, declare the below constants as private
     // for better encapsulation
-    const HOST = 'localhost';
+    const HOST = 'localhost:3306';
 
     const USERNAME = 'root';
 
@@ -191,18 +191,29 @@ class DataSource
         return $recordCount;
     }
 
-    public function getSingleValue($query, $paramType = "", $paramArray = array())
+    public function getQuestion($questionId)
     {
-        $stmt = $this->conn->prepare($query);
-
-        if (!empty($paramType) && !empty($paramArray)) {
-            $this->bindQueryParams($stmt, $paramType, $paramArray);
+        $query = "SELECT quiz_question FROM tdp_questions WHERE question_id = ?";
+        $paramType = "i";
+        $paramArray = array($questionId);
+        $result = $this->select($query, $paramType, $paramArray);
+        if ($result) {
+            return $result[0]['quiz_question'];
+        } else {
+            return "";
         }
+    }
 
-        $stmt->execute();
-        $stmt->bind_result($result);
-        $stmt->fetch();
-
-        return $result;
+    public function getAnswers($AnswerID)
+    {
+        $query = "SELECT answer FROM tdp_answers WHERE answer_id = ?";
+        $paramType = "i";
+        $paramArray = array($AnswerID);
+        $result = $this->select($query, $paramType, $paramArray);
+        if ($result) {
+            return $result[0]['answer'];
+        } else {
+            return "";
+        }
     }
 }

@@ -5,10 +5,20 @@ $tab = mysqli_fetch_assoc($res);
 echo $tab["question_id"] . ') ' . implode(' ', ["quiz_question"]);
 echo "<br />"; */
 
-require_once('../lib/DataSource.php');
+require_once '../lib/DataSource.php';
 
 use Phppot\DataSource;
 
-$db = new DataSource();
-$string = $db->getSingleValue("SELECT value FROM tdp_questions WHERE id = 3", "i", array(3));
-echo $string;
+$ds = new DataSource();
+
+$questionId = 1;
+$question = $ds->getQuestion($questionId);
+
+echo $question;
+echo '<br />';
+
+$AnswerID = 1;
+
+$answer = $ds->getAnswers($AnswerID);
+
+echo $answer;
