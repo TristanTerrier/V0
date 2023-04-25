@@ -1,42 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
+/* $id = mysqli_connect("localhost", "root", "", "nextutdp_bdd") or die("Erreur de connexion");
+$res = mysqli_query($id, "SELECT * FROM tdp_questions");
+$tab = mysqli_fetch_assoc($res);
+echo $tab["question_id"] . ') ' . implode(' ', ["quiz_question"]);
+echo "<br />"; */
 
-use Phppot\Member;
+require_once('../lib/DataSource.php');
 
-require '../lib/DataSource.php';
-?>
+use Phppot\DataSource;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <?php
-    // Requête SQL pour récupérer toutes les données de la table "users"
-    $sql = "SELECT * FROM tdp_questions";
-    $result = $conn->query($sql);
-
-    // Vérification si la requête a renvoyé des résultats
-    if ($result->num_rows > 0) {
-        // Boucle pour parcourir tous les résultats
-        while ($row = $result->fetch_assoc()) {
-            // Affichage des données
-            echo "ID: " . $row["question_id"] . " - question: " . $row["quiz_question"] . "<br>";
-        }
-    } else {
-        echo "Aucun résultat trouvé.";
-    }
-
-    // Fermeture de la connexion à la base de données
-    $conn->close();
-    ?>
-
-</body>
-
-</html>
+$db = new DataSource();
+$string = $db->getSingleValue("SELECT value FROM tdp_questions WHERE id = 3", "i", array(3));
+echo $string;
