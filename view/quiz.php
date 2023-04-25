@@ -17,8 +17,9 @@ $question = $ds->getQuestion($questionId);
 echo $question;
 echo '<br />';
 
-$AnswerID = 1;
+$answers = $ds->getAnswersById(1);
 
-$answer = $ds->getAnswers($AnswerID);
-
-echo $answer;
+// afficher les réponses
+foreach ($answers as $answer) {
+    echo $answer . '<br>';
+}
