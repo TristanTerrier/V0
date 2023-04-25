@@ -17,8 +17,11 @@ $question = $ds->getQuestion($questionId);
 echo $question;
 echo '<br />';
 
-$AnswerID = 1;
+$id_q =
+while ($question_id == 1){
+    $AnswerID = $i_q;
+    $i_q++;
+    $answer = $ds->getAnswers($AnswerID);
 
-$answer = $ds->getAnswers($AnswerID);
-
-echo $answer;
+    echo $answer;
+}
