@@ -24,9 +24,9 @@ class DataSource
     // for better encapsulation
     const HOST = 'localhost:3306';
 
-    const USERNAME = 'root';
+    const USERNAME = 'nextutdp_uzr';
 
-    const PASSWORD = '';
+    const PASSWORD = 'm6BJ4Mh8kh7WJbc0';
 
     const DATABASENAME = 'nextutdp_bdd';
 
