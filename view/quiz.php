@@ -6,13 +6,14 @@ use Phppot\DataSource;
 
 $ds = new DataSource();
 
-$questionId = isset($_POST['questionId']) ? $_POST['questionId'] : 2;
-
-if (isset($_POST['submit'])) {
-    $questionId++;
-}
-
+$questionId = isset($_GET['id']) ? $_GET['id'] : 1;
 $question = $ds->getQuestion($questionId);
+
+if ($question === '') {
+    // Si la question n'est pas trouvée dans la base de données, on redirige vers une autre page
+    header('Location: ./results.php');
+    exit;
+}
 
 echo $question;
 echo '<br />';
@@ -24,7 +25,4 @@ foreach ($answers as $answer) {
     echo $answer . '<br>';
 }
 ?>
-<form method="POST">
-    <input type="hidden" name="questionId" value="<?php echo $questionId; ?>">
-    <button type="submit" name="submit">VALIDER</button>
-</form>
+<a href="?id=<?php echo $questionId + 1; ?>"><button type="submit">VALIDER</button></a>
