@@ -24,9 +24,9 @@ class DataSource
     // for better encapsulation
     const HOST = 'localhost:3306';
 
-    const USERNAME = 'nextutdp_uzr';
+    const USERNAME = 'root';
 
-    const PASSWORD = 'm6BJ4Mh8kh7WJbc0';
+    const PASSWORD = '';
 
     const DATABASENAME = 'nextutdp_bdd';
 
@@ -204,16 +204,28 @@ class DataSource
         }
     }
 
-    public function getAnswers($AnswerID)
+    public function getAnswersById($questionId)
     {
-        $query = "SELECT answer FROM tdp_answers WHERE answer_id = ?";
+        $query = "SELECT answer FROM tdp_answers WHERE question_id = ?";
         $paramType = "i";
-        $paramArray = array($AnswerID);
-        $result = $this->select($query, $paramType, $paramArray);
-        if ($result) {
-            return $result[0]['answer'];
-        } else {
-            return "";
+        $paramArray = array($questionId);
+
+        $stmt = $this->conn->prepare($query);
+
+        if (!empty($paramType) && !empty($paramArray)) {
+            $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $answers = [];
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $answers[] = $row['answer'];
+            }
+        }
+
+        return $answers;
     }
 }
