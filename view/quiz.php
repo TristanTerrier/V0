@@ -1,4 +1,8 @@
 <?php
+session_start();
+session_destroy();
+header('Location: quiz.php');
+exit;
 
 require_once '../lib/DataSource.php';
 
@@ -6,23 +10,61 @@ use Phppot\DataSource;
 
 $ds = new DataSource();
 
-$questionId = isset($_GET['id']) ? $_GET['id'] : 1;
+if (!isset($_SESSION['questionId'])) {
+    // initialiser le questionId
+    $_SESSION['questionId'] = 1;
+    // initialiser le tableau de réponses
+    $_SESSION['userAnswers'] = array();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // ajouter la réponse de l'utilisateur au tableau
+    $userAnswer = $_POST['answer'];
+    array_push($_SESSION['userAnswers'], $userAnswer);
+
+    // passer à la question suivante
+    $_SESSION['questionId']++;
+}
+
+$questionId = $_SESSION['questionId'];
 $question = $ds->getQuestion($questionId);
 
-if ($question === '') {
-    // Si la question n'est pas trouvée dans la base de données, on redirige vers une autre page
-    header('Location: ./results.php');
+if (!$question) {
+    // si on a atteint la fin des questions, rediriger vers la page results.php
+    header('Location: results.php');
     exit;
 }
 
-echo $question;
-echo '<br />';
-
 $answers = $ds->getAnswersById($questionId);
 
-// afficher les réponses
-foreach ($answers as $answer) {
-    echo $answer . '<br>';
+if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
+    // Réinitialiser les variables de session
+    unset($_SESSION['current_question']);
+    unset($_SESSION['selected_answers']);
+    // Rediriger vers la première question
+    header('Location: ./quiz.php');
+    exit;
 }
 ?>
-<a href="?id=<?php echo $questionId + 1; ?>"><button type="submit">VALIDER</button></a>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <form method="post" action="quiz.php">
+        <h1><?php echo $question; ?></h1>
+        <?php
+        foreach ($answers as $answer) {
+            echo '<label><input type="radio" name="answer" value="' . $answer . '"> ' . $answer . '</label><br>';
+        }
+        ?>
+        <button type="submit">Valider</button>
+    </form>
+</body>
+
+</html>

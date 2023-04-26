@@ -228,4 +228,25 @@ class DataSource
 
         return $answers;
     }
+
+    function getUserAnswers()
+    {
+        $userAnswers = array();
+
+        foreach ($_POST as $key => $value) {
+            if (strpos($key, 'answer_') !== false) {
+                $answerId = (int) substr($key, strlen('answer_'));
+                $userAnswers[] = $answerId;
+            }
+        }
+
+        return $userAnswers;
+    }
+
+    public function getTotalQuestions()
+    {
+        $query = "SELECT COUNT(*) as count FROM tdp_questions";
+        $result = $this->select($query);
+        return $result[0]['count'];
+    }
 }
