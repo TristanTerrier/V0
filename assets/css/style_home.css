@@ -23,12 +23,7 @@ nav{
     background: rgb(255, 255, 255);
    
 }
-.logo{
-    width: 285px;
-    margin-top: -3%;
-    margin-left: -7%;
-    
-    
+
 }
 .nav-links{
     padding: 28px 0;
@@ -63,29 +58,9 @@ html, body {
     margin: 0;
     font-size: 20px;
 }
-#left {
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    outline: 1px solid;
-    background: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255));
-}
-#right {
-    width: 80%;
-    height: auto;
-    outline: 1px solid;
-    position: fixed;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(rgb(238,238,238) ,rgb(255, 255, 255));
-}
 
-.right_titel{
-    position: fixed
-}
-.recherche{
-    position: fixed;
-}
+
+
 .right_boutton{
     text-decoration: none;
     position: fixed;
