@@ -11,9 +11,9 @@
   <body>
     <?php include 'header.php'; ?>
     <br /><br /><br /><br /><br />
-    <div class="text-center">
-  <button><img src="../assets/img/bouton_plus.png" class="rounded" alt="..."></button>
-    </div>
+    <div class="container text-center">
+    <button type="button" class="btn btn-success"><img src="../assets/img/bouton_plus.png" class="plus" alt="..."></button>
+</div>
     
 
     <div class="container text-center">
