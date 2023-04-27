@@ -13,69 +13,107 @@
     <br /><br /><br /><br /><br />
     <div class="text-center">
   <button><img src="../assets/img/bouton_plus.png" class="rounded" alt="..."></button>
-</div>
+    </div>
     
 
     <div class="container text-center">
+
         <div class="row">
+
             <div class="col">
                 <div class="picture">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
                 </div>
                 <button type="button" class="btn btn-primary">make test</button>    
             </div>
+
             <div class="col">
                 <div class="picture">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
                 </div>
                 <button type="button" class="btn btn-primary">make test</button>
             </div>
+
             <div class="col">
                 <div class="picture">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
                 </div>
                 <button type="button" class="btn btn-primary">make test</button>
             </div>
+
             <div class="col">
                 <div class="picture">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
                 </div>
                 <button type="button" class="btn btn-primary">make test</button>
             </div>
-             <div class="row">
-            <div class="col">
-                <div class="picture">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
-                </div>
-                <button type="button" class="btn btn-primary">make test</button>
-            </div>
-            <div class="col">
-                <div class="picture">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
-                </div>
-                <button type="button" class="btn btn-primary">make test</button>
-            </div>
-            <div class="col">
-                <div class="picture">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
-                </div>
-                <button type="button" class="btn btn-primary">make test</button>
-            </div>
-            <div class="col">
-                <div class="picture">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
-                </div>
-                <button type="button" class="btn btn-primary">make test</button>
-            </div>
+
         </div>
+
         <div class="row">
+
             <div class="col">
                 <div class="picture">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
                 </div>
                 <button type="button" class="btn btn-primary">make test</button>
             </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
         </div>
+
+        <div class="row">
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+
+            <div class="col">
+                <div class="picture">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts6O00kmN45PclZ_JFZvLk8NMksM7Yqw2y6bMc5BElA&s" class="img-fluid" alt="...">
+                </div>
+                <button type="button" class="btn btn-primary">make test</button>
+            </div>
+            
+        </div>
+    
     </div>
 
 </body/html>
