@@ -1,0 +1,19 @@
+.img-fluid{   
+    border-radius: 3%;
+    border: solid 2px;
+    border-color: black;
+}
+.col{   
+    border-radius: 3%;
+    border: solid 2px;
+    border-color: black;
+  
+}
+
+.container text-center{
+    
+}
+
+.row{
+    column-gap: 5%;
+}

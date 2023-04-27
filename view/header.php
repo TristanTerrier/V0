@@ -15,11 +15,11 @@
 <body>
     <header>
             <nav>
-                <img src="../../Data/logo.png" class="logo/header">
+                <img src="https://next-u.academy/wp-content/uploads/2022/02/logo-next-u-academy-768x750.png" class="logo">
                 <ul class="nav-links">
-                    <li> <a href="https://google.com" target="_blank"> nextu education</a></li>
-                    <li> <a href="#Who Are We"> ?????</a></li>
-                    <li> <a href="header4.html" target="_blank">quizz</a></li>
+                    <li> <a href="https://google.com" target="_blank"> </a></li>
+                    <li> <a href="#Who Are We"> </a></li>
+                    <li> <a href="header4.html" target="_blank">historique</a></li>
                     <li class="btn">
                         <!--Add a link to go to the Sign-in page, Val's gonna do that-->
                         <a href="" target="_blank"> profil</a> 
