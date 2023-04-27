@@ -17,12 +17,12 @@
             <nav>
                 <img src="../../Data/logo.png" class="logo/header">
                 <ul class="nav-links">
-                    <li> <a href="https://google.com" target="_blank"> Missions</a></li>
-                    <li> <a href="#Who Are We"> Who are we</a></li>
-                    <li> <a href="header4.html" target="_blank">Informations</a></li>
+                    <li> <a href="https://google.com" target="_blank"> nextu education</a></li>
+                    <li> <a href="#Who Are We"> ?????</a></li>
+                    <li> <a href="header4.html" target="_blank">quizz</a></li>
                     <li class="btn">
                         <!--Add a link to go to the Sign-in page, Val's gonna do that-->
-                        <a href="" target="_blank"> Sign-in</a> 
+                        <a href="" target="_blank"> profil</a> 
                     </li>
                 </ul>
             </nav>

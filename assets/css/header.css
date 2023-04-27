@@ -49,10 +49,3 @@ nav{
 .nav-links li a:hover::after{
     width: 100%;
 }
-.btn{
-    background: #7ed957;
-    color: black;
-    padding: 5px 30px;
-    border-radius: 3px;
-    cursor: pointer;
-}
