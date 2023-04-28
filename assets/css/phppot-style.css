@@ -62,12 +62,12 @@ input[type=text].phppot-input, .phppot-container input,
 	border-radius: 3px;
 	color: #565656;
 	font-weight: bold;
-	background-color: #2cff37;
-	border-color: #1ffa7a #1af63b #25ff30;
+	background-color: #2fb4cf;
+	border-color: #297ab9 #297ab9 #2fb4cf;
 }
 
 .phppot-container button, .phppot-container input[type=submit]:hover {
-	background-color: #27f74a;
+	background-color: #297ab9;
 }
 
 .phppot-container button:focus {

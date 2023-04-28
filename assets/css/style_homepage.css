@@ -3,17 +3,18 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-.plus{
+/**.plus{
     align-items: center;
+
 }
 .img-fluid{   
-    border-radius: 3%;
+    /**border-radius: 3%;
     border: solid 1px;
     border-color: black;
     
 }
 .col{   
-   border-radius: 3%;
+  /* border-radius: 3%;
     border: solid 2px;
     border-color: black;
     padding: 0.4%;
