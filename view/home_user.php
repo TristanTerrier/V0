@@ -10,8 +10,8 @@
 </head>
   <body>
     <?php include 'header.php'; ?>
- 
-    <buttontype="button" class=""><img src="../assets/img/bouton_plusee.png" class="image-fluid" alt="..."> </button>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  
     
 
     <div class="container-fluid">
@@ -35,11 +35,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">Left</button>
-                    <button type="button" class="btn btn-primary">Middle</button>
-                    <button type="button" class="btn btn-primary">Right</button>
-                </div>
+                    <a href="#" class="btn btn-primary">make test</a>
                 </div>
                 </div>
             </div>
@@ -50,11 +46,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
+                    <a href="#" class="btn btn-primary">make test</a>
                 </div>
                 </div>
             </div>
