@@ -1,8 +1,5 @@
 <?php
 session_start();
-session_destroy();
-header('Location: quiz.php');
-exit;
 
 require_once '../controler/DataSource.php';
 
@@ -39,10 +36,10 @@ $answers = $ds->getAnswersById($questionId);
 
 if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
     // Réinitialiser les variables de session
-    unset($_SESSION['current_question']);
-    unset($_SESSION['selected_answers']);
+    unset($_SESSION['questionId']);
+    unset($_SESSION['userAnswers']);
     // Rediriger vers la première question
-    header('Location: ./quiz.php');
+    header('Location: quiz.php');
     exit;
 }
 ?>
@@ -60,7 +57,7 @@ if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
         <h1><?php echo $question; ?></h1>
         <?php
         foreach ($answers as $answer) {
-            echo '<label><input type="radio" name="answer" value="' . $answer . '"> ' . $answer . '</label><br>';
+            echo '<label><input type="checkbox" name="answer[]" value="' . $answer . '"> ' . $answer . '</label><br>';
         }
         ?>
         <button type="submit">Valider</button>

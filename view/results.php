@@ -10,6 +10,13 @@ $ds = new DataSource();
 $userAnswers = $_SESSION['userAnswers'];
 $totalQuestions = $ds->getTotalQuestions();
 
+if (isset($_POST['logout']) && $_POST['logout'] == 'true') {
+    // Détruire la session
+    session_destroy();
+    // Rediriger vers la page home
+    header('Location: home_user.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,14 +44,13 @@ $totalQuestions = $ds->getTotalQuestions();
                     <td><?php echo isset($userAnswers[$i]) ? $userAnswers[$i] : 'Aucune réponse choisie'; ?></td>
                 </tr>
             <?php } ?>
-            <form action="quiz.php" method="post">
-                <input type="hidden" name="restart" value="true">
-                <button type="submit">Recommencer le test</button>
-            </form>
-
         </tbody>
     </table>
 
+    <form method="post">
+        <input type="hidden" name="logout" value="true">
+        <button type="submit">Terminer la session</button>
+    </form>
 </body>
 
 </html>
