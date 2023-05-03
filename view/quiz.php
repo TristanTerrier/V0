@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../lib/DataSource.php';
+require_once '../controler/DataSource.php';
 
 use Phppot\DataSource;
 
