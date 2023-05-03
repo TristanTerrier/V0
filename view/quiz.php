@@ -4,7 +4,7 @@ session_destroy();
 header('Location: quiz.php');
 exit;
 
-require_once '../lib/DataSource.php';
+require_once '../controler/DataSource.php';
 
 use Phppot\DataSource;
 
