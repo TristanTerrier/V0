@@ -48,19 +48,30 @@ if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
 <html lang="fr">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Quiz</title>
 </head>
 
 <body>
+<?php include 'header_quizz.php'; ?> <br />
     <form method="post" action="quiz.php">
-        <h1><?php echo $question; ?></h1>
-        <?php
-        foreach ($answers as $answer) {
-            echo '<label><input type="checkbox" name="answer[]" value="' . $answer . '"> ' . $answer . '</label><br>';
-        }
-        ?>
-        <button type="submit">Valider</button>
+        <div class="container">
+            <div class="row>">
+                <div class="col-9">
+                    <h3><?php echo $question; ?></h3>
+                </div>
+                <div class="col-6">
+                    <?php
+                    foreach ($answers as $answer) {
+                        echo '<label><input class="form-check-label" type="checkbox" name="answer[]" value="' . $answer . '"> ' . $answer . '</label><br><br>';
+                    }
+                    ?>
+                </div>
+          
+        <button type="submit" class="btn btn-primary">Valider</button>
+        </div>
+        </div>
     </form>
 </body>
 
