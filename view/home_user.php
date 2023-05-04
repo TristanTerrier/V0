@@ -189,6 +189,6 @@ foreach ($quizzes as $quiz) {
 
         </div>
 
-</body /html>
+</body>
 
 </html>
