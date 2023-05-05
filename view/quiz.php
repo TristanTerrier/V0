@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../controler/DataSource.php';
+require_once '../controller/DataSource.php';
 
 use Phppot\DataSource;
 
@@ -54,7 +54,7 @@ if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
 </head>
 
 <body>
-<?php include 'header_quizz.php'; ?> <br />
+    <?php include 'header_quizz.php'; ?> <br />
     <form method="post" action="quiz.php">
         <div class="container">
             <div class="row>">
@@ -68,9 +68,9 @@ if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
                     }
                     ?>
                 </div>
-        
-        <button type="submit" class="btn btn-primary">Valider</button>
-        </div>
+
+                <button type="submit" class="btn btn-primary">Valider</button>
+            </div>
         </div>
     </form>
 </body>

@@ -13,31 +13,6 @@
 <body>
     <?php include 'header.php'; ?>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-
-
-
-        <?php
-        $query = $pdo->prepare("SELECT * FROM quiz");
-        $query->execute();
-        $quizzes = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        // Boucle pour générer une carte HTML pour chaque quiz
-        foreach ($quizzes as $quiz) {
-            echo '<div class="col">';
-            echo '<div class="card" style="width: 18rem;">';
-            echo '<img src="' . $quiz['quizz_picture'] . '" class="card-img-top" alt="...">';
-            echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . $quiz['quiz_name'] . '</h5>';
-            echo '<p class="card-text">' . $quiz['quiz_description'] . '</p>';
-            echo '<a href="/quiz.php?id=' . $quiz['id'] . '" class="btn btn-primary">Faire le quiz</a>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        }
-
-        ?>
-
-
         <div class="container-fluid">
             <br />
             <div class="row">
