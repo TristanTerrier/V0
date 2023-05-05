@@ -250,4 +250,43 @@ class DataSource
         $result = $this->select($query);
         return $result[0]['count'];
     }
+
+    function bindValue(&$stmt, $param, $value, $dataType = null)
+    {
+        switch ($dataType) {
+            case 'int':
+                $stmt->bindValue($param, (int) $value, SQLITE3_INTEGER);
+                break;
+            case 'float':
+                $stmt->bindValue($param, (float) $value, SQLITE3_FLOAT);
+                break;
+            case 'bool':
+                $stmt->bindValue($param, (bool) $value, SQLITE3_INTEGER);
+                break;
+            case 'null':
+                $stmt->bindValue($param, null, SQLITE3_NULL);
+                break;
+            default:
+                $stmt->bindValue($param, $value, SQLITE3_TEXT);
+                break;
+        }
+    }
+
+
+
+    function getScoresById($questionId, $conn)
+    {
+        $sql = "SELECT score_categorie_1, score_categorie_2, score_categorie_3, score_categorie_4, score_categorie_5, score_categorie_6, score_categorie_7, score_categorie_8 FROM tdp_answers WHERE id_answer = :questionId";
+        $stmt = $conn->prepare($sql);
+        $questionId = (int) $questionId;
+        bindValue($stmt, ':questionId', $questionId, 'int');
+        $result = array();
+        $res = $stmt->execute();
+        if ($res) {
+            while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
+                $result = $row;
+            }
+        }
+        return $result;
+    }
 }
