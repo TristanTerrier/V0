@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../controller/DataSource.php';
+require_once '../controler/DataSource.php';
 
 use Phppot\DataSource;
 
@@ -68,7 +68,7 @@ if (isset($_POST['restart']) && $_POST['restart'] == 'true') {
                     }
                     ?>
                 </div>
-          
+        
         <button type="submit" class="btn btn-primary">Valider</button>
         </div>
         </div>
