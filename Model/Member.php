@@ -9,7 +9,7 @@ class Member
 
     function __construct()
     {
-        require_once '../controler/DataSource.php';
+        require_once '../controller/DataSource.php';
         $this->ds = new DataSource();
     }
 
