@@ -272,21 +272,4 @@ class DataSource
         }
     }
 
-
-
-    function getScoresById($questionId, $conn)
-    {
-        $sql = "SELECT score_categorie_1, score_categorie_2, score_categorie_3, score_categorie_4, score_categorie_5, score_categorie_6, score_categorie_7, score_categorie_8 FROM tdp_answers WHERE id_answer = :questionId";
-        $stmt = $conn->prepare($sql);
-        $questionId = (int) $questionId;
-        bindValue($stmt, ':questionId', $questionId, 'int');
-        $result = array();
-        $res = $stmt->execute();
-        if ($res) {
-            while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
-                $result = $row;
-            }
-        }
-        return $result;
-    }
 }
