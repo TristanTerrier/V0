@@ -13,12 +13,15 @@
 <body>
     <?php include 'header.php'; ?>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<<<<<<< HEAD
 
 
 
         
 
 
+=======
+>>>>>>> 85c94f07b6c59481b2ac90ba840599cc3240bac7
         <div class="container-fluid">
             <br />
             <div class="row">
