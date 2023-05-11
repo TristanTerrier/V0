@@ -104,7 +104,7 @@ class Member
                     "status" => "success",
                     "message" => "You have registered successfully."
                 );
-                $url = "./home.php";
+                $url = "./home_user.php";
                 header("Location: $url");
             }
         }

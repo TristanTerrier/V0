@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
                     echo "Résultat dans la catégorie $categoryName : $result<br><br>";
                    
                 }
- <a href=""></a>
+
                 exit();
             } else {
                 header("Location: quiz.php?id=$quizId&question=" . ($questionId + 1));
