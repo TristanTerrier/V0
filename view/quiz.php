@@ -42,9 +42,11 @@ if (isset($_GET['id'])) {
                 /*echo "Score total : $totalScore<br>";*/
 
                 foreach ($categoryResults as $categoryName => $result) {
+                  
                     echo "Résultat dans la catégorie $categoryName : $result<br><br>";
+                   
                 }
-
+ <a href=""></a>
                 exit();
             } else {
                 header("Location: quiz.php?id=$quizId&question=" . ($questionId + 1));
@@ -71,8 +73,14 @@ if (isset($_GET['id'])) {
         echo "<meta charset='UTF-8'>";
         echo "<title>Quiz</title>";
         echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous'>";
+   
         echo "</head>";
         echo "<body>";
+        include 'header_quizz.php';
+        echo "<br />";
+        echo "<div class='container'>";
+        echo "<div class='row'>";
         echo "<h3>Question $questionNumber :</h3>";
         echo "<p>$questionText</p>";
         echo "<form method='POST' action='quiz.php?id=$quizId'>";
@@ -82,15 +90,21 @@ if (isset($_GET['id'])) {
             $answerId = $answerData['answer_id'];
             $answerText = $answerData['answer'];
 
+            echo "<div class='col-md-6 offset-md-1'>";
             echo "<label>";
-            echo "<input type='radio' name='answer' value='$answerId' required>";
+            echo "<input class='form-check-input' type='radio' name='answer' value='$answerId' required>";
             echo $answerText;
-            echo "</label><br>";
+            echo "</label><br><br>";
+            echo "</div>";
         }
 
         echo "<br>";
-        echo "<button type='submit'>Suivant</button>";
+        echo "<div class='col-md-6 offset-md-2'>";
+        echo "<button class='btn btn-primary' type='submit'>Suivant</button>";
+        echo "</div>";
         echo "</form>";
+        echo  "</div>";
+        echo  "</div>";
         echo "</body>";
         echo "</html>";
 
